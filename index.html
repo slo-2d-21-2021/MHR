@@ -1,0 +1,63 @@
+<!DOCTYPEHTML>
+    <html lang="pl">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>MHR</title>
+
+        <center>
+            <h2 class="container">Kalkulator MHR</h2>
+        </center>
+
+        <script>
+
+            function myFunction1() {
+                var a = document.getElementById("a").value;
+                a = parseInt(a);
+                var b = document.getElementById("b").value;
+                b = parseInt(b);
+                var c = 0;
+                c = 210 - (0.5 * a) - (0.022 * b) + 4;
+                document.getElementById("wynik").innerHTML = c + " MHR";
+            }
+            function myFunction2() {
+                var a = document.getElementById("a").value;
+                a = parseInt(a);
+                var b = document.getElementById("b").value;
+                b = parseInt(b);
+                var c = 0;
+                c = 210 - (0.5 * a) - (0.022 * b);
+                document.getElementById("wynik2").innerHTML = c + " MHR";
+            }
+        </script>
+    </head>
+
+    <body bgcolor="#98FB98" text="#006400">
+        <center>
+            <h2>
+                <divc lass=" container">MHR - maksymalne tętno jakie jesteśmy w stanie osiągnąć. Możemy je obliczyć
+                    orientacyjnie z wzoru.
+            </h2>
+            <h3 class="header"> - dla mężczyzn - </br>
+                210 - 0.5 x wiek - 0.022 x waga w kilogramach + 4
+            </h3>
+            Wiek:
+            <input type="text" id="a" value=0>
+            Masa:
+            <input type="text" id="b" value=0>
+            <button onclick="myFunction1()">oblicz</button>
+            <div id="wynik"></div>
+
+            <h3 class="header"> - dla kobiet - </br>
+                210 - 0.5 x wiek - 0.022 x waga w kilogramach
+            </h3>
+            Wiek:
+            <input type="text" id="a" value=0>
+            Masa:
+            <input type="text" id="b" value=0>
+            <button onclick="myFunction2()">oblicz</button>
+            <div id="wynik2"></div>
+        </center>
+    </body>
+
+    </html>
